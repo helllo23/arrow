@@ -20,7 +20,6 @@
 #include <memory>
 
 #include <arrow-glib/arrow-glib.hpp>
-
 #include <arrow-flight-glib/common.hpp>
 #include <arrow-flight-glib/server.hpp>
 
@@ -118,7 +117,6 @@ gaflight_data_stream_class_init(GAFlightDataStreamClass *klass)
                                                        G_PARAM_CONSTRUCT_ONLY));
   g_object_class_install_property(gobject_class, PROP_STREAM, spec);
 }
-
 
 typedef struct GAFlightRecordBatchStreamPrivate_ {
   GArrowRecordBatchReader *reader;
@@ -247,7 +245,6 @@ gaflight_record_batch_stream_new(GArrowRecordBatchReader *reader,
                  "reader", reader,
                  NULL));
 }
-
 
 typedef struct GAFlightServerOptionsPrivate_ {
   arrow::flight::FlightServerOptions options;
